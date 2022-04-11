@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block container %}
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Formulaire d'emprunt</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               Veuillez remplir le formulaire et cliquez sur enregistrer
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form" method="post" action=" ">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input class="form-control" type="date" name="date" placeholder="La date">
+                              </div>
+                              <div class="form-group">
+                                <label>Nom</label>
+                                <input type="text" class="form-control" placeholder="Enter le nom" name="nom">
+                              </div>
+                            <div class="form-group">
+                                <label>Montant</label>
+                                <input type="text" class="form-control" placeholder="Enter le montant" name="montant">
+                            </div>
+                            <div class="form-group">
+                                <label>Numéro</label>
+                                <input type="text" class="form-control" placeholder="Enter le numero" name="numero">
+                            </div>
+                            <button type="submit" class="btn btn-success">enregistrer</button>
+                          </form>
+                    </div>
+                 
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+</div>
+{% endblock %}
