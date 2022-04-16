@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+{% block container %}
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Formulaire de créditation</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               Veuillez remplir le formulaire et cliquez sur enregistrer
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form role="form" method="post" action=" ">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input class="form-control" type="date" name="date" placeholder="La date">
+                                
+                            </div>
+                            <div class="form-group">
+                                <label>solde actuel</label>
+                                <input type="text" class="form-control" placeholder="Enter le solde actuel" name="sold_actuel">
+                            </div>
+                            <div class="form-group">
+                                <label>Dernière créditation</label>
+                                <input class="form-control" placeholder="Enter la dernière créditation" name="derniere_creditation">
+                            </div>
+                            <button type="submit" class="btn btn-success">enregistrer</button>
+                          </form>
+                    </div>
+                 
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+</div>
+{% endblock %}
